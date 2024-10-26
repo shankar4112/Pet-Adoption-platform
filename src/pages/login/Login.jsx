@@ -115,7 +115,7 @@ const axiosPublic=useAxiosPublic();
              
              <div>
                 <h4 className="block  text-5xl mt-14 pt-10 text-black text-center font-bold">
-   Log<span className='text-pink-600'>in</span>
+   Log<span className='text-red-600'>in</span>
   </h4>
   <p className="mt-1 block  text-base font-normal text-warning  text-center">
     Enter your details to Login.
@@ -131,12 +131,12 @@ const axiosPublic=useAxiosPublic();
               {/* Text overlay */}
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg"></div>
               <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-center text-white -translate-y-1/2 text-sm lg:text-3xl  ">
-                Welcome to <span className='lg:text-4xl text-xl text-pink-600 px-4 py-2 rounded-md font-bold'>four Pows</span> Pet Adopting center. <br />Login For Explore our Website
+                 <span className='lg:text-4xl text-xl text-pink-600 px-4 py-2 rounded-md font-bold'></span> 
               </p>
             </div>
           </div>
 
- <div className="  mx-3 px-3 bg-white-200 border-2 border-pink-500 rounded-lg" >
+ <div className="  mx-3 px-3 bg-white-200 border-2 border-red-500 rounded-lg" >
             <div className="relative flex flex-col justify-center items-center rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
   
      
@@ -167,7 +167,7 @@ const axiosPublic=useAxiosPublic();
     </div>
     <p className=' text-sm mt-10 text-black'>Forget your Password?</p>
     <button
-      className="relative mt-6 block w-full select-none rounded-lg bg-pink-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      className="relative mt-6 block w-full select-none rounded-lg bg-blue-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="submit" value='Register'
       data-ripple-light="true"
     >

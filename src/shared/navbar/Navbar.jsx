@@ -5,7 +5,6 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../components/providers/AuthProvider";
 import { MdArrowDropDown } from "react-icons/md";
 
-
 // import icon from '../../assets/user.png';
 
 const Navbar = ({ children }) => {
@@ -30,6 +29,7 @@ const Navbar = ({ children }) => {
   const handleScroll = () => {
     // Check if the user has scrolled down, and set isScrolled accordingly
     if (window.scrollY > 0) {
+      
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -53,19 +53,53 @@ const Navbar = ({ children }) => {
   const containerClass = isScrolled ? "py-3" : ""; 
   const darkThemeClass = theme === "dark" ? "bg-gray-900" : "bg-white"; 
 
-    const navLinks=<>
-    <li className=" "><NavLink to="/" className={({ isActive, isPending }) =>
-                    isPending ? "pending " : isActive ? " text-[#fff] font-bold  rounded-3xl bg-[#D52B5C] px-6 py-2 underline-offset-8  hover:text-red " : ""
-                  }>Home</NavLink></li>
-    <li><NavLink to="/petlisting" className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-[#D52B5C] px-6 py-2   underline-offset-8 hover:text-red  " : ""
-                  }>Pet Listing</NavLink></li>
-                  <li><NavLink to="/donationcampaign" className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-[#fff] font-bold rounded-3xl bg-[#D52B5C] px-6 py-2   underline-offset-8 hover:text-red  " : ""
-                  }>Donation Campaigns</NavLink></li>
-                 
-    
+  const navLinks = (
+    <>
+      <li className=" ">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " text-[#fff] font-bold rounded-3xl bg-[#0000FF] px-6 py-2 underline-offset-8 hover:text-blue "
+              : ""
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/petlisting"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#fff] font-bold rounded-3xl bg-[#0000FF] px-6 py-2 underline-offset-8 hover:text-blue "
+              : ""
+          }
+        >
+          Pet Show
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/donationcampaign"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#fff] font-bold rounded-3xl bg-[#0000FF] px-6 py-2 underline-offset-8 hover:text-blue "
+              : ""
+          }
+        >
+          Donations
+        </NavLink>
+      </li>
     </>
+  );
+  
     return (
       <div className=" z-40">
         <div className={`drawer z-30 ${containerClass} `}>
@@ -99,7 +133,7 @@ const Navbar = ({ children }) => {
               <div className="flex gap-20">
                <div className="flex  items-center gap-7">
                <div className="  w-16"> <img src={logo}  alt="" /></div>
-              <div className="  text-2xl font-bold ">FourPows</div>
+              <div className="  text-2xl font-bold ">Putty</div>
                </div>
               <div className="flex-none hidden lg:block">
                 <ul className="flex gap-7">
@@ -177,7 +211,11 @@ const Navbar = ({ children }) => {
         <CiLogin className="text-2xl"></CiLogin>
       {
         user?<button onClick={handleSignOut} className="btn btn-sm md:btn-md border text-white bg-[#D52B5C] border-white-2 ">Log Out</button>
-        :   <Link to='/login'> <button className="py-2 text-white bg-[#D52B5C] px-6 border border-white-2 border-none lg:ml-5 rounded-sm">Login</button></Link>
+        : <Link to='/login'>
+        <button className="py-2 text-white bg-[#0000FF] px-6 border border-white-2 border-none lg:ml-5 rounded-sm">
+          Login
+        </button>
+      </Link>
       }
       </div>
               {/*  */}

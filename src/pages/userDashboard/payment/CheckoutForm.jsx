@@ -4,7 +4,6 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../components/providers/AuthProvider";
-
 const CheckoutForm = () => {
   const [error, setError] = useState('');
   const [clientSecret, setClientSecret] = useState('');
