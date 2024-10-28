@@ -20,7 +20,7 @@ import MainLayout from "../../layouts/MainLayout";
 import PetListing from "../../pages/petListing/PetListing";
 import UserDashboard from "../../pages/userDashboard/UserDashboard";
 import AddPet from "../../pages/addpet/AddPet";
-import AddPetDashboard from "../..AddPetDashboard.jsx";
+import AddPetDashboard from "../../pages/userDashboard/UserDashboard";
 import AdoptPet from "../../pages/petListing/petlistingComponent/AdoptPet";
 import MyAddedPets from "../../pages/userDashboard/myaddedpet/MyAddedPets";
 import AdoptionReq from "../../pages/userDashboard/adoptionReq/AdoptionReq";
